@@ -11,10 +11,10 @@
   "scripts": {
   
     
-  "dev": "vite",
+  "dev": "vite --host",
   
     
-  "build": "vite build",
+  "build": "vite build ",
   
     
   "preview": "vite preview"
