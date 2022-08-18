@@ -7,6 +7,8 @@ import { gltfLoad } from "./components/gltf_loader/gltfLoad.js";
 import { hdriLoad } from "./components/hdri_loader/hdri_loader.js";
 import { Debug } from "./systems/Debug.js";
 
+import { Group } from "three";
+
 import { ARButton } from "three/examples/jsm/webxr/ARButton.js";
 import { VRButton } from "three/examples/jsm/webxr/VRButton.js";
 
@@ -56,7 +58,6 @@ class World {
       debug.update(renderer);
     });
     renderer.render(scene, camera);
-    document.body.appendChild(ARButton.createButton(renderer));
 
     //DEBUG
     debug.displayStats();

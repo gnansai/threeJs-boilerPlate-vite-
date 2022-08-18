@@ -1,4 +1,5 @@
 import { PerspectiveCamera } from "three";
+import { Group } from "three";
 
 function createCamera() {
   const camera = new PerspectiveCamera(
