@@ -4,8 +4,8 @@ import { EquirectangularReflectionMapping, sRGBEncoding } from "three";
 import { TextureLoader } from "three";
 
 async function hdriLoad() {
-  const hdriLoader = new RGBELoader().setPath("assets/hdri/");
-  const textureLoader = new TextureLoader().setPath("assets/hdri/");
+  const hdriLoader = new RGBELoader().setPath("public/hdri/");
+  const textureLoader = new TextureLoader().setPath("public/hdri/");
 
   const [background1, hdri1] = await Promise.all([
     textureLoader.loadAsync("lythwood_room_1k.jpg"),

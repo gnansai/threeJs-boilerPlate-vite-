@@ -7,7 +7,7 @@ import { LoadingManager } from "three";
 async function gltfLoad(renderer) {
   const loader = new GLTFLoader();
 
-  const modelData = await loader.loadAsync("assets/models/materials_test.glb");
+  const modelData = await loader.loadAsync("public/models/materials_test.glb");
 
   const loadedmodel = setupModel(modelData);
 
