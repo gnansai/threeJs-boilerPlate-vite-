@@ -37,7 +37,6 @@ class World {
   //SETS UP BACKGROUND
   async loadBackground() {
     const { background1, hdri1 } = await hdriLoad();
-
     scene.background = background1;
     scene.environment = hdri1;
   }
