@@ -14,6 +14,7 @@ function createRenderer() {
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = PCFSoftShadowMap;
   renderer.physicallyCorrectLights = true;
+  renderer.xr.enabled = true;
 
   return renderer;
 }
