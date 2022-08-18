@@ -1,11 +1,11 @@
-import { RGBELoader } from "../../../../node_modules/three/examples/jsm/loaders/RGBELoader.js";
+import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
 
 import { EquirectangularReflectionMapping, sRGBEncoding } from "three";
 import { TextureLoader } from "three";
 
 async function hdriLoad() {
-  const hdriLoader = new RGBELoader().setPath("public/hdri/");
-  const textureLoader = new TextureLoader().setPath("public/hdri/");
+  const hdriLoader = new RGBELoader().setPath("/hdri/");
+  const textureLoader = new TextureLoader().setPath("/hdri/");
 
   const [background1, hdri1] = await Promise.all([
     textureLoader.loadAsync("lythwood_room_1k.jpg"),

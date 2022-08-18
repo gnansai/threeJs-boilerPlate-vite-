@@ -6,7 +6,6 @@ import { Resizer } from "./systems/Resizer.js";
 import { gltfLoad } from "./components/gltf_loader/gltfLoad.js";
 import { hdriLoad } from "./components/hdri_loader/hdri_loader.js";
 import { Debug } from "./systems/Debug.js";
-import { TWEEN } from "../../node_modules/three/examples/jsm/libs/tween.module.min.js";
 
 // These variables are module-scoped: we cannot access them
 // from outside the module
@@ -48,7 +47,6 @@ class World {
     renderer.setAnimationLoop(function () {
       renderer.render(scene, camera);
 
-      TWEEN.update();
       controls.update();
 
       //DEBUG
