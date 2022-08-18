@@ -56,7 +56,7 @@ class World {
       debug.update(renderer);
     });
     renderer.render(scene, camera);
-    document.body.appendChild(VRButton.createButton(renderer));
+    document.body.appendChild(ARButton.createButton(renderer));
 
     //DEBUG
     debug.displayStats();
