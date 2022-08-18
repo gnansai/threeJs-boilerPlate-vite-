@@ -44,30 +44,6 @@ class Debug {
     let pixelTest = function () {
       renderer.setPixelRatio(window.devicePixelRatio / obj1.x);
     };
-
-    var pixelRatio = gui.addFolder("pixelRatio");
-
-    pixelRatio
-      .add(obj1, "x", 1, 5)
-      .name("pixelRatio")
-      .step(1)
-      .onChange(pixelTest);
-
-    //gui.hide();
-
-    // document.addEventListener("keydown", function (e) {
-    //   let test;
-    //   if (e.key === "h") {
-    //   }
-
-    //   if (test == 1) {
-    //     test = 0;
-    //     console.log(test);
-    //   } else if (test == 0) {
-    //     test = 1;
-    //     console.log(test);
-    //   }
-    // });
   }
 
   displayStats() {
@@ -79,7 +55,6 @@ class Debug {
   update(renderer) {
     //UPDATE
     stats.update();
-    pixelRatio = window.devicePixelRatio;
     drawCalls = renderer.info.render.calls;
     visibleTriangles = renderer.info.render.triangles;
 
