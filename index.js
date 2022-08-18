@@ -4,7 +4,7 @@ async function main() {
   const container = document.querySelector("#scene-container");
   const world = new World(container);
   world.loadBackground();
-  world.loadGltf();
+  await world.loadGltf();
   world.start();
 }
 
