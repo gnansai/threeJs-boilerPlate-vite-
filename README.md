@@ -1,6 +1,6 @@
 # threeJs-boilerPlate-vite
 
-[three-js-boiler-plate-vite.vercel.app](three-js-boiler-plate-vite.vercel.app)
+[three-js-boiler-plate-vite.vercel.app](https://three-js-boiler-plate-vite.vercel.app/)
 
 Run these commands </br>
 
