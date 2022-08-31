@@ -18,8 +18,32 @@ body {
   background-color: rgb(236, 236, 236);
 }
 
-.non-3d {
-  width: 100%;
-  position: absolute;
-  z-index: 1;
+
+
+
+.links{
+  margin: auto;
+  position:fixed;
+  bottom:0px;
+  
+  right:0px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  
+  z-index:1000000;  
+  color: rgb(114, 114, 114);
+    
+  
+}
+
+.links:hover{
+  color: rgb(0, 0, 0);
+}
+
+.image{
+  width: 50px;
+ 
+  
 }
