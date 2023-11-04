@@ -1,7 +1,7 @@
 import {
   WebGLRenderer,
   ACESFilmicToneMapping,
-  sRGBEncoding,
+  SRGBColorSpace,
   PCFSoftShadowMap,
 } from "three";
 
@@ -10,7 +10,7 @@ function createRenderer() {
 
   renderer.toneMapping = ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1;
-  renderer.outputEncoding = sRGBEncoding;
+  renderer.outputColorSpace = SRGBColorSpace;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = PCFSoftShadowMap;
   renderer.physicallyCorrectLights = true;
