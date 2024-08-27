@@ -1,28 +1,23 @@
 import {
-  BoxBufferGeometry,
+  
   MathUtils,
   Mesh,
   MeshStandardMaterial,
 } from "three";
+import { BoxGeometry } from "three";
+import { mx_fractal_noise_vec3, mx_worley_noise_vec3 } from "three/webgpu";
+import { mx_cell_noise_float, normalWorld } from "three/webgpu";
+import { MeshStandardNodeMaterial, normalGeometry } from "three/webgpu";
 
-function createCube(x, y, z, rotx, roty, rotz, col, seed) {
-  const geometry = new BoxBufferGeometry(1, 1, 1);
-  const material = new MeshStandardMaterial({ color: col });
+function createCube(x, y, z) {
+  const geometry = new BoxGeometry(2, 2, 2);
+  const material = new MeshStandardNodeMaterial();
+  material.colorNode = mx_worley_noise_vec3(normalWorld);
   const cube = new Mesh(geometry, material);
-  cube.position.set(x, y, z);
 
-  cube.rotation.set(
-    MathUtils.degToRad(rotx),
-    MathUtils.degToRad(roty),
-    MathUtils.degToRad(rotz)
-  );
 
-  cube.anim = () => {
-    // increase the cube's rotation each frame
-    cube.rotation.z += 0.01;
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-  };
+
+ 
 
   return cube;
 }

@@ -1,12 +1,12 @@
+
 import {
-  WebGLRenderer,
-  ACESFilmicToneMapping,
+  WebGPURenderer, ACESFilmicToneMapping,
   SRGBColorSpace,
   PCFSoftShadowMap,
-} from "three";
+} from "three/webgpu";
 
 function createRenderer() {
-  const renderer = new WebGLRenderer({ antialias: true });
+  const renderer = new WebGPURenderer({ antialias: true });
 
   renderer.toneMapping = ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1;

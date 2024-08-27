@@ -1,5 +1,5 @@
-import { PerspectiveCamera } from "three";
-import { Group } from "three";
+import { PerspectiveCamera } from "three/webgpu";
+import { Group } from "three/webgpu";
 
 function createCamera() {
   const camera = new PerspectiveCamera(
