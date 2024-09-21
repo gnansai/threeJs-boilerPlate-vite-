@@ -7,8 +7,10 @@ function createCameraControls(camera, canvas) {
   controls.enableZoom = true;
   controls.target.set(0, 0, 0);
   controls.update();
-
+  controls.tick = () => controls.update();
   return controls;
 }
+
+
 
 export { createCameraControls };

@@ -24,6 +24,7 @@
     "vite-plugin-mkcert": "^1.17.6"
   },
   "dependencies": {
-    "three": "^0.167.1"
+    "three": "^0.167.1",
+    "tweakpane": "^4.0.4"
   }
 }

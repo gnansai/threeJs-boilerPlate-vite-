@@ -6,6 +6,7 @@ async function main() {
   world.loadBackground();
   world.loadGltf();
   world.start();
+
 }
 
 main().catch((err) => {
