@@ -67,13 +67,6 @@ class World {
 
 
   start() {
-    // renderer.setAnimationLoop(function () {
-    //   renderer.render(scene, camera);
-    //   // controls.update();
-    // });
-    // renderer.render(scene, camera);
-    // console.log(scene);
-
     loop.start();
 
 
