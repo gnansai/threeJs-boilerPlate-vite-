@@ -5,12 +5,8 @@ import { createRenderer } from "./systems/renderer.js";
 import { Resizer } from "./systems/Resizer.js";
 import { gltfLoad } from "./components/gltf_loader/gltfLoad.js";
 import { hdriLoad } from "./components/hdri_loader/hdri_loader.js";
-// import { Debug } from "./systems/Debug.js";
 import { createCube } from "./components/cube.js";
-import { Pane } from "tweakpane";
 import { DebugUI } from "./systems/DebugUi.js";
-import { createInspector } from 'three-inspect/vanilla'
-// import { Loop } from "three/webgpu";
 import { AnimLoop } from "./systems/AnimLoop.js";
 
 // These variables are module-scoped: we cannot access them
