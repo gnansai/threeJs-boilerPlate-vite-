@@ -10,8 +10,6 @@ class DebugUI {
             title: "Debug-UI"
         });
         this.scene = scene;
-
-        // this.scene.add(gridHelper);
         this.gridHelper = null;
         this.axesHelper = null;
 
@@ -23,7 +21,7 @@ class DebugUI {
             axesVisible: true,
         };
 
-        this.addGridHelper(this.helperParams.gridSize, this.helperParams.gridDivisions);
+        this.addGridHelper();
         this.addHelperControls();
 
         this.addAxesHelper(this.helperParams.axesSize);
@@ -45,21 +43,20 @@ class DebugUI {
         // Add bindings for size and divisions of the grid helper
         folder.addBinding(this.helperParams, 'gridSize', { min: 1, max: 50, step: 1 })
             .on('change', (ev) => {
-                this.addGridHelper(ev.value, this.helperParams.divisions);
+                this.addGridHelper();
             });
 
         folder.addBinding(this.helperParams, 'gridDivisions', { min: 1, max: 50, step: 1 })
             .on('change', (ev) => {
-                this.addGridHelper(this.helperParams.size, ev.value);
+                this.addGridHelper();
             });
 
         folder.addBinding(this.helperParams, 'gridVisible')
             .on('change', (ev) => {
                 this.gridHelper.visible = ev.value;
-
             });
 
-        folder.addBinding(this.helperParams, 'gridDivisions', { min: 1, max: 50, step: 1 })
+        folder.addBinding(this.helperParams, 'axesSize', { min: 1, max: 50, step: 1 })
             .on('change', (ev) => {
                 this.addAxesHelper( ev.value);
             });
@@ -81,16 +78,15 @@ class DebugUI {
         this.axesHelper.visible =  this.helperParams.axesVisible;
     }
 
-    addGridHelper(size = 10, divisions = 10) {
+    addGridHelper() {
         if (this.gridHelper) {
             this.scene.remove(this.gridHelper);
             this.gridHelper.dispose(); // Remove existing gridHelper if already added
         }
-
-        this.gridHelper = new GridHelper(size, divisions);
+        this.gridHelper = new GridHelper(this.helperParams.gridSize, this.helperParams.gridDivisions);
         this.scene.add(this.gridHelper);
         this.gridHelper.visible =  this.helperParams.gridVisible;
-        // console.log(this.gridHelper);
+        console.log(this.gridHelper);
     }
 
     addUI(obj, title) {
