@@ -1,4 +1,4 @@
-import { GridHelper } from "three";
+import { GridHelper } from "three/webgpu";
 
 let createHelpers = function () {
     const size = 10;

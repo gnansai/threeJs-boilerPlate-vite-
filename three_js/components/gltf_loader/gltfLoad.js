@@ -1,9 +1,11 @@
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 import { setupModel } from "./setupModel.js";
 
-import { LoadingManager } from "three";
-import { DRACOLoader } from "three/examples/jsm/Addons.js";
+import { LoadingManager } from "three/webgpu";
+import { DRACOLoader } from 'three/examples/jsm/Addons.js';
+
+
 
 
 async function gltfLoad(renderer) {

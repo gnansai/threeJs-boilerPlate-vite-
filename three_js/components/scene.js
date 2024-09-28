@@ -1,4 +1,4 @@
-import { Color, Scene } from "three";
+import { Color, Scene } from "three/webgpu";
 
 function createScene() {
   const scene = new Scene();

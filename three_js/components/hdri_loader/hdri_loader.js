@@ -1,7 +1,8 @@
-import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
 
-import { EquirectangularReflectionMapping,SRGBColorSpace} from "three";
-import { TextureLoader } from "three";
+
+import { RGBELoader } from "three/examples/jsm/Addons.js";
+import { EquirectangularReflectionMapping,SRGBColorSpace, TextureLoader} from "three/webgpu";
+
 
 async function hdriLoad() {
   const hdriLoader = new RGBELoader().setPath("/hdri/");

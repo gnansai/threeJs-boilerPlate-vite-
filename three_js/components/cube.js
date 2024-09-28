@@ -3,8 +3,8 @@ import {
   MathUtils,
   Mesh,
   MeshStandardMaterial,
-} from "three";
-import { BoxGeometry } from "three";
+} from "three/webgpu";
+import { BoxGeometry } from "three/webgpu";
 import { mx_fractal_noise_vec3, mx_worley_noise_vec3 } from "three/webgpu";
 import { mx_cell_noise_float, normalWorld } from "three/webgpu";
 import { MeshStandardNodeMaterial, normalGeometry } from "three/webgpu";

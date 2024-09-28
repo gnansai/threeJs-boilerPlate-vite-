@@ -1,6 +1,7 @@
-import { AxesHelper, GridHelper, MathUtils } from "three";
-import { Pane } from "tweakpane"
 import Stats from "three/examples/jsm/libs/stats.module.js";
+import { AxesHelper, GridHelper, MathUtils } from "three/webgpu";
+import { Pane } from "tweakpane"
+
 
 
 
