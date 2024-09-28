@@ -20,11 +20,10 @@
   },
   "homepage": "https://github.com/gnansai/threeJs-boilerPlate-vite#readme",
   "devDependencies": {
-    "vite": "^5.4.2",
-    "vite-plugin-mkcert": "^1.17.6"
+    "vite": "^5.4.8"
   },
   "dependencies": {
-    "three": "^0.167.1",
+    "three": "^0.169",
     "tweakpane": "^4.0.4"
   }
 }
