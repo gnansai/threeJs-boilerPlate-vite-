@@ -58,7 +58,7 @@ class World {
     const { loadedmodel } = await gltfLoad(renderer);
     scene.add(loadedmodel);
 
-    console.log(loadedmodel)
+    // console.log(loadedmodel)
     tweakPaneUI.addUI(loadedmodel, "GLTFModel");
 
   }
