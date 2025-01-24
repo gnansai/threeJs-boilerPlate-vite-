@@ -8,6 +8,8 @@ import { hdriLoad } from "./components/hdri_loader/hdri_loader.js";
 import { createCube } from "./components/cube.js";
 import { DebugUI } from "./systems/DebugUi.js";
 import { AnimLoop } from "./systems/AnimLoop.js";
+import { GridHelper } from "three/webgpu";
+import { Pane } from "tweakpane";
 
 // These variables are module-scoped: we cannot access them
 // from outside the module
@@ -30,7 +32,8 @@ class World {
 
     loop = new AnimLoop(camera, scene, renderer);
     loop.updatables.push(cube);
-    // tweakPaneUi = new Pane();
+    tweakPaneUI = new Pane();
+
 
     tweakPaneUI = new DebugUI(scene);
     tweakPaneUI.addUI(cube, "cube");
@@ -59,7 +62,7 @@ class World {
     scene.add(loadedmodel);
 
     // console.log(loadedmodel)
-    tweakPaneUI.addUI(loadedmodel, "GLTFModel");
+    // tweakPaneUI.addUI(loadedmodel, "GLTFModel");
 
   }
 
